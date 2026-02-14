@@ -1,5 +1,5 @@
 from student import Student
-from storage import save_student, get_students
+from storage import save_student, get_students, search_student
 from utils import print_menu
 
 def add_student():
@@ -21,3 +21,6 @@ if choice == "1":
     add_student()
 elif choice == "2":
     view_students()
+elif choice == "3":
+    roll = input("Enter Roll Number: ")
+    search_student(roll)
