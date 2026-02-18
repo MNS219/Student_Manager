@@ -13,3 +13,9 @@ def search_student(roll):
     for s in students:
         if s.startswith(roll):
             print("Found:", s)
+
+    
+def delete_student(roll):
+    students = get_students()
+    new = [s for s in students if not s.startswith(roll)]
+    open(FILE, "w").writelines(new)
